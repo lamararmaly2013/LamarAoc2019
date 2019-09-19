@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText  editTextEmail , editTextPassword;
-    Button buttonLogIn , buttonSigUp;
+    Button buttonLogIn , buttonSignUp;
 
 
     @Override
@@ -21,8 +22,10 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         editTextEmail=findViewById(R.id.editTextEmail);
         editTextPassword =findViewById(R.id.editTextPassword);
 
-        buttonLogIn = findViewById(R.id.button);
+        buttonLogIn = findViewById(R.id.ButtonLogin);
         buttonLogIn.setOnClickListener(this);
+        buttonSignUp = findViewById(R.id.ButtonSignUp);
+        buttonSignUp.setOnClickListener(this);
 
 
         }
@@ -32,7 +35,24 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         if(v==buttonLogIn) {
 
+            if(editTextEmail.getText().toString().equals("")||editTextPassword.getText().toString().equals("")){
+                Toast.makeText(this,"Empty Email or Password" , Toast.LENGTH_LONG).show();
+            }
+
+            else{
+
             Intent i = new Intent(this, HomePageActivity.class);
+            i.putExtra("Email", editTextEmail.getText().toString());
+            i.putExtra("password", editTextPassword.getText().toString());
+            startActivity(i);
+
+            }
+
+        }
+
+        else{
+
+            Intent i= new Intent(this ,HomePageActivity.class);
             startActivity(i);
         }
     }
