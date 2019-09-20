@@ -42,7 +42,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
             else{
 
             Intent i = new Intent(this, HomePageActivity.class);
-            i.putExtra("Email", editTextEmail.getText().toString());
+            i.putExtra("email", editTextEmail.getText().toString());
             i.putExtra("password", editTextPassword.getText().toString());
             startActivity(i);
 
@@ -52,7 +52,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
         else{
 
-            Intent i= new Intent(this ,HomePageActivity.class);
+            Intent i= new Intent(this ,SignUpActivity.class);
             startActivity(i);
         }
     }
