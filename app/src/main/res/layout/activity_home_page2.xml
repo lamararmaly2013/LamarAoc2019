@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomePageActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/ButtonSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:padding="25dp"
+        android:text="Schedule" />
+
+    <Button
+        android:id="@+id/ButtonHomework"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:padding="25dp"
+        android:text="HomeWork" />
+
+    <Button
+        android:id="@+id/ButtonExams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:padding="25dp"
+        android:text="Exams" />
+
+    <Button
+        android:id="@+id/ButtonReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:padding="25dp"
+        android:text="Reminder" />
+</LinearLayout>

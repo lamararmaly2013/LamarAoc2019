@@ -9,30 +9,26 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="25dp"
-        android:ems="10"
         android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="25dp" />
+        android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
-        android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="25dp" />
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/ButtonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="100dp"
-        android:text="SignUP &amp; LogIn" />
+        android:text="SignUP - LogIn" />
 </LinearLayout>
