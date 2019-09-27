@@ -7,35 +7,44 @@
     android:orientation="vertical"
     tools:context=".HomePageActivity">
 
-    <Button
-        android:id="@+id/ButtonSchedule"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:padding="25dp"
-        android:text="Schedule" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/ButtonHomework"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:padding="25dp"
-        android:text="HomeWork" />
+        <Button
+            android:id="@+id/ButtonSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:padding="25dp"
+            android:text="Schedule" />
 
-    <Button
-        android:id="@+id/ButtonExams"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:padding="25dp"
-        android:text="Exams" />
+        <Button
+            android:id="@+id/ButtonHomework"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:padding="25dp"
+            android:text="HomeWork" />
 
-    <Button
-        android:id="@+id/ButtonReminder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:padding="25dp"
-        android:text="Reminder" />
+        <Button
+            android:id="@+id/ButtonExams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:padding="25dp"
+            android:text="Exams" />
+
+        <Button
+            android:id="@+id/ButtonReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:padding="25dp"
+            android:text="Reminder" />
+
+    </LinearLayout>
+
 </LinearLayout>

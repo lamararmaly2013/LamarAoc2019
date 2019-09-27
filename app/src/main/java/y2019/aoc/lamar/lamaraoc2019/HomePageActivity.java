@@ -32,7 +32,6 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         buttonReminer.setOnClickListener(this);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.logout, menu);
@@ -43,12 +42,13 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.LogOut:
-                Toast.makeText(getBaseContext(), "Log Out", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Log Out", Toast.LENGTH_SHORT).show();
 
         }
         return true;
 
     }
+
 
     @Override
     public void onClick(View v) {
