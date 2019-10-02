@@ -7,11 +7,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.Toast;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonSchedule , buttonHomeWork, buttonExams, buttonReminer;
+
+
 
 
     @Override
@@ -30,6 +33,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         buttonReminer= findViewById(R.id.ButtonReminder);
         buttonReminer.setOnClickListener(this);
+
+
     }
 
     @Override
