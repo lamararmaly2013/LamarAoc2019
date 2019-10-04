@@ -20,7 +20,8 @@
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_margin="15dp"
+            android:layout_margin="25dp"
+            android:background="@drawable/button_design"
             android:text="Schedule" />
 
         <Button
@@ -29,6 +30,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:layout_margin="25dp"
+            android:background="@drawable/button_design"
             android:text="HomeWork" />
 
     </LinearLayout>
@@ -45,14 +47,16 @@
             android:layout_height="100dp"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:layout_margin="25dp"
+            android:background="@drawable/button_design"
             android:text="Exams" />
 
         <Button
             android:id="@+id/ButtonReminder"
-            android:layout_width="120dp"
+            android:layout_width="116dp"
             android:layout_height="100dp"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:layout_margin="25dp"
+            android:background="@drawable/button_design"
             android:text="Reminder" />
     </LinearLayout>
 
