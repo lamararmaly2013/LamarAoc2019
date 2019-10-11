@@ -7,8 +7,50 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/bg4"
+    android:background="@drawable/bg7"
     tools:context=".HomePageActivity">
+
+    <Button
+        android:id="@+id/ButtonSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_marginEnd="25sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_design"
+        android:text="Schedule" />
+
+    <Button
+        android:id="@+id/ButtonExams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_marginEnd="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/examsbutton"
+        android:text="Exams" />
+
+    <Button
+        android:id="@+id/ButtonHomework"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/homeworkbutton"
+        android:text="HomeWork" />
+
+    <Button
+        android:id="@+id/ButtonReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_margin="25dp"
+        android:background="@drawable/reminderbutton"
+        android:text="Reminder" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,23 +58,6 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/ButtonSchedule"
-            android:layout_width="106dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_margin="25dp"
-            android:background="@drawable/button_design"
-            android:text="Schedule" />
-
-        <Button
-            android:id="@+id/ButtonExams"
-            android:layout_width="106dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_margin="25dp"
-            android:background="@drawable/examsbutton"
-            android:text="Exams" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,23 +66,6 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/ButtonHomework"
-            android:layout_width="106dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_margin="25dp"
-            android:background="@drawable/homeworkbutton"
-            android:text="HomeWork" />
-
-        <Button
-            android:id="@+id/ButtonReminder"
-            android:layout_width="106dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_margin="25dp"
-            android:background="@drawable/reminderbutton"
-            android:text="Reminder" />
     </LinearLayout>
 
 </LinearLayout>
