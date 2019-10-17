@@ -4,16 +4,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class HomeWorkActivity extends AppCompatActivity {
+
+    ArrayList<HomeWork> homeWorks;
+    ListView hwlv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_work);
 
+        homeWorks = new ArrayList<>();
+        homeWorks.add(new HomeWork("CS", "Java HW", null, false));
 
+        hwlv= findViewById(R.id.HomeWorkListView);
+        homeWorks= new ArrayList<>();
 
     }
 

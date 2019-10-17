@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 public class MainAdapter extends BaseAdapter {
 
@@ -36,11 +37,15 @@ public class MainAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(inflater==null){
-            inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)
+            inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         if(convertView==null){
             convertView = inflater.inflate(R.layout.row_item,null);
         }
-        return null;
+        TextView textView=convertView.findViewById(R.id.textView);
+
+        textView.setText(dayWord[position]);
+
+        return convertView;
     }
 }
