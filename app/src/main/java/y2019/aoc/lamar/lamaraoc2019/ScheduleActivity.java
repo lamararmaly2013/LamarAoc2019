@@ -1,5 +1,6 @@
 package y2019.aoc.lamar.lamaraoc2019;
 
+import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,13 +49,17 @@ public class ScheduleActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "you clicked"+dayWord[+position],Toast.LENGTH_SHORT).show();
-                dayWord[position]="Lamar";
+
                 adapter.notifyDataSetChanged();
 
                 AlertDialog.Builder mBuilder= new AlertDialog.Builder(ScheduleActivity.this);
                 mBuilder.setTitle("Choose Subject");
-                mBuilder.setSingleChoiceItems(listItems, -1, )
+                mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
             }
 
 

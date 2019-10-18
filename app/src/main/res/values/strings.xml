@@ -3,6 +3,21 @@
     <array name="subject">
         <item>Computer</item>
         <item>Math</item>
+        <item>Arabic</item>
+        <item>English</item>
+        <item>Hebrew</item>
+        <item>Sport</item>
+        <item>Break</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>History</item>
+        <item>Biology</item>
+        <item>Biotechnology</item>
+        <item>Electronics</item>
+        <item>Civilians</item>
+        <item>Heritage</item>
+        <item>Education</item>
+        
     </array>
 </resources>
 
