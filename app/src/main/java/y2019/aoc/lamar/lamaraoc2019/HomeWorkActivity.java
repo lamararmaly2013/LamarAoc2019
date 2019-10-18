@@ -22,9 +22,13 @@ public class HomeWorkActivity extends AppCompatActivity {
 
         homeWorks = new ArrayList<>();
         homeWorks.add(new HomeWork("CS", "Java HW", null, false));
+        homeWorks.add(new HomeWork("Arabic", "insha HW", null, true));
+        homeWorks.add(new HomeWork("CS", "Java HW", null, false));
 
+        homeWorks.add(new HomeWork("CS", "Java HW", null, false));
         hwlv= findViewById(R.id.HomeWorkListView);
-        homeWorks= new ArrayList<>();
+        CustomAdapter2 adapter2= new CustomAdapter2(this, R.layout.activity_check_box_list, homeWorks);
+        hwlv.setAdapter(adapter2);
 
     }
 

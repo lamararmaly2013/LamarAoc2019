@@ -1,17 +1,32 @@
 package y2019.aoc.lamar.lamaraoc2019;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
 public class ScheduleActivity extends AppCompatActivity {
 
     GridView gridView;
+    String[] listItems=new String[16];
 
-    String[] dayWord= {"Monday","Tuesday","Wednesday","Thursday","Friday"};
+
+
+    String[] dayWord= {"","Monday","Tuesday","Wednesday","Thursday","Friday",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",
+                        "","","","","","",};
 
 
     @Override
@@ -19,16 +34,30 @@ public class ScheduleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        gridView= findViewById(R.id.gridView);
 
-        MainAdapter adapter= new MainAdapter(ScheduleActivity.this,dayWord);
-        gridView.setAdapter(adapter);
+        gridView= findViewById(R.id.gridView);
+        listItems= getResources().getStringArray(R.array.subject);
+
+
+
+      final MainAdapter adapter= new MainAdapter(ScheduleActivity.this,dayWord);
+      gridView.setAdapter(adapter);
+
+
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "you clicked"+dayWord[+position],Toast.LENGTH_SHORT).show();
+                dayWord[position]="Lamar";
+                adapter.notifyDataSetChanged();
+
+                AlertDialog.Builder mBuilder= new AlertDialog.Builder(ScheduleActivity.this);
+                mBuilder.setTitle("Choose Subject");
+                mBuilder.setSingleChoiceItems(listItems, -1, )
             }
+
+
         });
 
 

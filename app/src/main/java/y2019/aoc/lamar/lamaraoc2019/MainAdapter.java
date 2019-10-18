@@ -13,7 +13,7 @@ public class MainAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private String[] dayWord;
 
-    public MainAdapter(Context context, String dayWord){
+    public MainAdapter(Context context, String[] dayWord){
         this.context=context;
         this.dayWord=dayWord;
     }
