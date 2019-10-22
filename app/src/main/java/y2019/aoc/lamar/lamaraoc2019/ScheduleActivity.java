@@ -10,24 +10,24 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
-public class ScheduleActivity extends AppCompatActivity {
+public class ScheduleActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     GridView gridView;
     String[] listItems=new String[16];
 
 
-
-    String[] dayWord= {"","Monday","Tuesday","Wednesday","Thursday","Friday",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",
-                        "","","","","","",};
+    MainAdapter adapter;
+    String subject;
+    String[] dayWord= {"","MO","TU","WEN","THU","FRI",
+                        "1","","","","","",
+                        "2","","","","","",
+                        "3","","","","","",
+                        "4","","","","","",
+                        "5","","","","","",
+                        "6","","","","","",
+                        "7","","","","","",
+                        "8","","","","","",
+                        "9","","","","",""};
 
 
     @Override
@@ -41,29 +41,34 @@ public class ScheduleActivity extends AppCompatActivity {
 
 
 
-      final MainAdapter adapter= new MainAdapter(ScheduleActivity.this,dayWord);
+      adapter = new MainAdapter(ScheduleActivity.this,dayWord);
       gridView.setAdapter(adapter);
 
 
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        gridView.setOnItemClickListener(this);
+    }
 
-                adapter.notifyDataSetChanged();
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
-                AlertDialog.Builder mBuilder= new AlertDialog.Builder(ScheduleActivity.this);
-                mBuilder.setTitle("Choose Subject");
-                mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+        if(position >  5 ) {
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(ScheduleActivity.this);
+            mBuilder.setTitle("Choose Subject");
 
-                    }
-                });
-            }
-
-
-        });
+            mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    subject = listItems[which];
+                    dayWord[position] = subject;
+                    adapter.notifyDataSetChanged();
+                    dialog.dismiss();
+                }
+            });
+            // create and show the alert dialog
+            AlertDialog dialog = mBuilder.create();
+            dialog.show();
+        }
 
 
     }
