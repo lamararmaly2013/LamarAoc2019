@@ -18,7 +18,7 @@ public class ScheduleActivity extends AppCompatActivity implements AdapterView.O
 
     MainAdapter adapter;
     String subject;
-    String[] dayWord= {"","MO","TU","WEN","THU","FRI",
+    String[] dayWord= {"","MO","TU","WED","THU","FRI",
                         "1","","","","","",
                         "2","","","","","",
                         "3","","","","","",
@@ -52,7 +52,8 @@ public class ScheduleActivity extends AppCompatActivity implements AdapterView.O
     @Override
     public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
-        if(position >  5 ) {
+
+        if(position >  6 && position != 12 && position!= 18 && position!=24 && position!= 30 && position!=36 && position!=42 && position!=48 && position!=54 && position!=60) {
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(ScheduleActivity.this);
             mBuilder.setTitle("Choose Subject");
 

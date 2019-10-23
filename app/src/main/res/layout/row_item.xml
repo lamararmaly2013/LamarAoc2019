@@ -4,7 +4,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="20dp"
     android:gravity="center"
     >
 
@@ -13,9 +12,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Day"
-        android:textSize="10dp"
-        android:layout_marginTop="5dp"
-        />
+        android:layout_margin="5dp"
+        
+        android:text="DAY"
+        android:textSize="20sp" />
 
 </LinearLayout>
