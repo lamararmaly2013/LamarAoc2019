@@ -1,5 +1,6 @@
 package y2019.aoc.lamar.lamaraoc2019;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,7 +23,7 @@ public class HomeWorkActivity extends AppCompatActivity {
 
         homeWorks = new ArrayList<>();
         homeWorks.add(new HomeWork("CS", "Java HW", null, false));
-        homeWorks.add(new HomeWork("Arabic", "insha HW", null, true));
+        homeWorks.add(new HomeWork("Arabic", "insha HW", null, false));
         homeWorks.add(new HomeWork("CS", "Java HW", null, false));
 
         homeWorks.add(new HomeWork("CS", "Java HW", null, false));
@@ -36,12 +37,16 @@ public class HomeWorkActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.addhomework, menu);
         return super.onCreateOptionsMenu(menu);
+
+
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.addHomeWork:
+                Intent i= new Intent(this ,AddHomeWorkActivity.class);
+                startActivity(i);
                 Toast.makeText(getBaseContext(), "add homework", Toast.LENGTH_SHORT).show();
 
         }

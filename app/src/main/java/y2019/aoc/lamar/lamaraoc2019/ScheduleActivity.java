@@ -52,7 +52,7 @@ public class ScheduleActivity extends AppCompatActivity implements AdapterView.O
     public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
 
-        if(position != 6 && position != 12 && position!= 18 && position!=24 && position!= 30 && position!=36 && position!=42 && position!=48 && position!=54 && position!=60) {
+        if(position !=0 && position != 6 && position != 12 && position!= 18 && position!=24 && position!= 30 && position!=36 && position!=42 && position!=48 && position!=54 && position!=60) {
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(ScheduleActivity.this);
             mBuilder.setTitle("Choose Subject");
 

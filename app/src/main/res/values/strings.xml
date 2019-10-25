@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">LamarAoc2019</string>
     <array name="subject">
-        <item>Computer</item>
+        <item>CS</item>
         <item>Math</item>
-        <item>Arabic</item>
-        <item>English</item>
-        <item>Hebrew</item>
+        <item>ARB</item>
+        <item>ENG</item>
+        <item>HBR</item>
         <item>Sport</item>
         <item>Break</item>
-        <item>Physics</item>
-        <item>Chemistry</item>
-        <item>History</item>
-        <item>Biology</item>
-        <item>Biotechnology</item>
-        <item>Electronics</item>
-        <item>Civilians</item>
-        <item>Heritage</item>
-        <item>Education</item>
+        <item>PHYCS</item>
+        <item>CHEM</item>
+        <item>HIS</item>
+        <item>BIO</item>
+        <item>BioT</item>
+        <item>ELC</item>
+        <item>CVL</item>
+        <item>HRT</item>
+        <item>EDU</item>
 
     </array>
 </resources>

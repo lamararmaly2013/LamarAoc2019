@@ -13,19 +13,18 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
-        android:text="MON       TUE       WED       THU      FRI"
+        android:text="MON      TUE      WED      THU     FRI"
         android:textSize="20sp" />
 
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="700dp"
-
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:numColumns="6" >
+        android:numColumns="6">
 
     </GridView>
 

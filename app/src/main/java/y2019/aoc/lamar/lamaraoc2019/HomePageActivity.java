@@ -47,7 +47,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.LogOut:
+                Intent i= new Intent(this ,LogInActivity.class);
+                startActivity(i);
                 Toast.makeText(getBaseContext(), "Log Out", Toast.LENGTH_SHORT).show();
+
 
         }
         return true;
