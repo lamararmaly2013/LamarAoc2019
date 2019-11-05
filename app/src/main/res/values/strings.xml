@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">LamarAoc2019</string>
     <array name="subject">
         <item>CS</item>
         <item>Math</item>
@@ -19,5 +18,6 @@
         <item>EDU</item>
 
     </array>
+    <string name="app_name">LamarAoc2019</string>
 </resources>
 
