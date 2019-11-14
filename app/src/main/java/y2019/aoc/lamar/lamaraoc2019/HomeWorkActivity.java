@@ -82,12 +82,11 @@ public class HomeWorkActivity extends AppCompatActivity{
 
 
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.addhomework, menu);
-        return super.onCreateOptionsMenu(menu);
-
+   //     return super.onCreateOptionsMenu(menu);
+        return true;
 
     }
 
@@ -103,5 +102,6 @@ public class HomeWorkActivity extends AppCompatActivity{
         return true;
 
     }
+
 
 }

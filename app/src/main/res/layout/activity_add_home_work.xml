@@ -9,18 +9,71 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:layout_width="176dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="210dp"
+            android:layout_marginRight="40dp"
             android:layout_marginTop="80dp"
             android:text="Choose Subject" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="80dp"
+            android:layout_weight="1"
+            android:text="SUBJECT" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="description      "
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:text="Due Date" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:text="Date" />
     </LinearLayout>
 
 </LinearLayout>
