@@ -96,7 +96,6 @@ public class HomeWorkActivity extends AppCompatActivity{
             case R.id.addHomeWork:
                 Intent i= new Intent(this ,AddHomeWorkActivity.class);
                 startActivity(i);
-                Toast.makeText(getBaseContext(), "add homework", Toast.LENGTH_SHORT).show();
 
         }
         return true;
