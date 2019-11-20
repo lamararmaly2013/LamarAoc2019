@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button buttonSchedule , buttonHomeWork, buttonExams, buttonReminer;
+    Button buttonSchedule , buttonHomeWork, buttonExams, buttonReminder;
 
 
 
@@ -31,8 +31,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         buttonExams = findViewById(R.id.ButtonExams);
         buttonExams.setOnClickListener(this);
 
-        buttonReminer= findViewById(R.id.ButtonReminder);
-        buttonReminer.setOnClickListener(this);
+        buttonReminder= findViewById(R.id.ButtonReminder);
+        buttonReminder.setOnClickListener(this);
 
 
     }
@@ -79,7 +79,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
             startActivity(i);
         }
 
-        else if(v==buttonReminer){
+        else if(v==buttonReminder){
 
             Intent i= new Intent(this ,ReminderActivity.class);
             startActivity(i);
