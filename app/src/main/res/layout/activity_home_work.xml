@@ -8,19 +8,36 @@
     android:background="@drawable/bg8"
     tools:context=".HomeWorkActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="30dp"
-        android:text="HomeWorks"
-        android:textSize="24sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="30dp"
+            android:text="HomeWorks"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/ButtonAddHw"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            app:srcCompat="@drawable/addhw55" />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/HomeWorkListView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="60dp"
         android:layout_marginTop="30dp"
         android:textFilterEnabled="false"

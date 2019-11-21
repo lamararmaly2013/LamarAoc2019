@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,10 +24,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class HomeWorkActivity extends AppCompatActivity{
+public class HomeWorkActivity extends AppCompatActivity implements View.OnClickListener {
 
     ArrayList<HomeWork> homeWorks;
     ListView hwlv;
+    ImageButton buttonAddHw;
 
 
 //*
@@ -38,13 +42,10 @@ public class HomeWorkActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_work);
 
-        homeWorks = new ArrayList<>();
-        // homeWorks.add();
-       //* myRef.push().setValue(new HomeWork("CS", "Java HW", null, false));
-        //homeWorks.add(new HomeWork("Arabic", "insha HW", null, false));
-        //homeWorks.add(new HomeWork("CS", "Java HW", null, false));
+        buttonAddHw=findViewById(R.id.ButtonAddHw);
+        buttonAddHw.setOnClickListener(this);
 
-        //homeWorks.add(new HomeWork("CS", "Java HW", null, false));
+        homeWorks = new ArrayList<>();
 
         hwlv = findViewById(R.id.HomeWorkListView);
         final CustomAdapter2 adapter2= new CustomAdapter2(this, R.layout.activity_check_box_list, homeWorks);
@@ -54,7 +55,6 @@ public class HomeWorkActivity extends AppCompatActivity{
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 HomeWork hw = dataSnapshot.getValue(HomeWork.class);
-                //Toast.makeText(this, "Inside child added", Toast.LENGTH_SHORT).show();
                 homeWorks.add(hw);
                 adapter2.notifyDataSetChanged();
             }
@@ -103,4 +103,10 @@ public class HomeWorkActivity extends AppCompatActivity{
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+        Intent i = new Intent(this, AddHomeWorkActivity.class);
+        startActivity(i);
+    }
 }
