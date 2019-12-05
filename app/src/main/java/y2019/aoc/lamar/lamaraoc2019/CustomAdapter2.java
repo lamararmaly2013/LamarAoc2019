@@ -26,6 +26,7 @@ public class CustomAdapter2 extends ArrayAdapter<HomeWork> {
 
     private int resourceLayout;
     private Context mContext;
+    
 
     public CustomAdapter2(Context context, int resource, List<HomeWork> items) {
         super(context, resource, items);

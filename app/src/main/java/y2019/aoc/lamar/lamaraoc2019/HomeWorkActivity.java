@@ -1,10 +1,13 @@
 package y2019.aoc.lamar.lamaraoc2019;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,7 +32,7 @@ public class HomeWorkActivity extends AppCompatActivity implements View.OnClickL
     ArrayList<HomeWork> homeWorks;
     ListView hwlv;
     ImageButton buttonAddHw;
-
+    RecyclerView mRecyclerView;
 
 //*
     final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -80,8 +83,28 @@ public class HomeWorkActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
+        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT | ItemTouchHelper.DOWN | ItemTouchHelper.UP) {
 
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                Toast.makeText(HomeWorkActivity.this, "on Move", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
+                Toast.makeText(HomeWorkActivity.this, "on Swiped ", Toast.LENGTH_SHORT).show();
+                //Remove swiped item from list and notify the RecyclerView
+                int position = viewHolder.getAdapterPosition();
+                homeWorks.remove(position);
+                adapter2.notifyDataSetChanged();
+
+            }
+        };
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
+   //     itemTouchHelper.attachToRecyclerView(rv);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.addhomework, menu);
