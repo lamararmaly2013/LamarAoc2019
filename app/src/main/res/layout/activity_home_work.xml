@@ -8,6 +8,17 @@
     android:background="@drawable/bg8"
     tools:context=".HomeWorkActivity">
 
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleViewList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1px"
+        android:visibility="visible"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
@@ -37,7 +48,7 @@
     <ListView
         android:id="@+id/HomeWorkListView"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="30dp"
         android:textFilterEnabled="false"

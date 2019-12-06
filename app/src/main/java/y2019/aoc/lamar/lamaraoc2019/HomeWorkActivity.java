@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Menu;
@@ -26,13 +27,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HomeWorkActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ArrayList<HomeWork> homeWorks;
+    ArrayList<HomeWork> homeWorks = new ArrayList<>();
+    MyRecyclerViewAdapter adapter;
+    RecyclerView rv;
+
     ListView hwlv;
     ImageButton buttonAddHw;
-    RecyclerView mRecyclerView;
+
+  //  List<String> myDataset = new ArrayList<>()
 
 //*
     final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -44,6 +50,12 @@ public class HomeWorkActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_work);
+
+        rv = findViewById(R.id.recycleViewList);
+
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new MyRecyclerViewAdapter(this, homeWorks);
+        rv.setAdapter(adapter);
 
         buttonAddHw=findViewById(R.id.ButtonAddHw);
         buttonAddHw.setOnClickListener(this);
@@ -97,13 +109,14 @@ public class HomeWorkActivity extends AppCompatActivity implements View.OnClickL
                 //Remove swiped item from list and notify the RecyclerView
                 int position = viewHolder.getAdapterPosition();
                 homeWorks.remove(position);
-                adapter2.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();
 
             }
         };
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
-   //     itemTouchHelper.attachToRecyclerView(rv);
+        itemTouchHelper.attachToRecyclerView(rv);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
