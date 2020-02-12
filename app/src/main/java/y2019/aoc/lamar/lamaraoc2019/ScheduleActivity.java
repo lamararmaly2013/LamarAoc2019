@@ -49,26 +49,26 @@ public class ScheduleActivity extends AppCompatActivity implements AdapterView.O
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+        public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
 
-        if(position !=0 && position != 6 && position != 12 && position!= 18 && position!=24 && position!= 30 && position!=36 && position!=42 && position!=48 && position!=54 && position!=60) {
-            AlertDialog.Builder mBuilder = new AlertDialog.Builder(ScheduleActivity.this);
-            mBuilder.setTitle("Choose Subject");
+            if(position !=0 && position != 6 && position != 12 && position!= 18 && position!=24 && position!= 30 && position!=36 && position!=42 && position!=48 && position!=54 && position!=60) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ScheduleActivity.this);
+                mBuilder.setTitle("Choose Subject");
 
-            mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    subject = listItems[which];
-                    dayWord[position] = subject;
-                    adapter.notifyDataSetChanged();
-                    dialog.dismiss();
-                }
-            });
-            // create and show the alert dialog
-            AlertDialog dialog = mBuilder.create();
-            dialog.show();
-        }
+                mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        subject = listItems[which];
+                        dayWord[position] = subject;
+                        adapter.notifyDataSetChanged();
+                        dialog.dismiss();
+                    }
+                });
+                // create and show the alert dialog
+                AlertDialog dialog = mBuilder.create();
+                dialog.show();
+            }
 
 
     }
